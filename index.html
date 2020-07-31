@@ -1,12 +1,31 @@
-<link href="https://vjs.zencdn.net/5.10.4/video-js.css" rel="stylesheet">
-<div>
-  <video id="my-video" class="video-js" controls preload="auto" width="300" height="480" data-setup='{"playbackRates": [1, 1.5, 2] }'>
-    <source src="rtmp://192.168.0.70/live/banana" type='rtmp/mp4'>
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a web browser that
-      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
-</div>
+<!doctype html>
+<html lang="en">
+<head>
+  <link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet">  
+  <!-- <script>
+    videojs.setGlobalOptions({
+      flash: {
+        swf: 'video-js.swf'
+      }
+    });
+  </script>   -->
+</head>
 
-<script src="https://vjs.zencdn.net/5.10.4/video.js"></script>
+<body>
+  <video id="videojs-flash-player" class="video-js vjs-default-skin" autoplay
+  preload="auto" width="640" height="264" data-setup='{ "techOrder": ["flash"] }'>
+  <source src="rtmp://192.168.0.70/live/banana" type='rtmp/mp4'>
+</video>
+<!-- <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script> -->
+  <script src="video.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-flash/2.1.1/videojs-flash.js"></script>
+  <script src="videojs-flashls-source-handler.min.js"></script>  
+</body>
+<script>
+  var player = videojs('videojs-flash-player', {
+    flash: {
+      swf: 'video-js.swf'
+    }
+  });
+</script>
+</html>
