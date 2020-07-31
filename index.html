@@ -1,31 +1,24 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <link href="https://vjs.zencdn.net/7.1.0/video-js.css" rel="stylesheet">  
-  <!-- <script>
-    videojs.setGlobalOptions({
-      flash: {
-        swf: 'video-js.swf'
-      }
-    });
-  </script>   -->
-</head>
+ <!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset=utf-8 />
+ <title>Video.js RTMP Example Embed</title>
 
-<body>
-  <video id="videojs-flash-player" class="video-js vjs-default-skin" autoplay
-  preload="auto" width="640" height="264" data-setup='{ "techOrder": ["flash"] }'>
-  <source src="rtmp://192.168.0.70/live/banana" type='rtmp/mp4'>
-</video>
-<!-- <script src="http://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script> -->
-  <script src="video.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-flash/2.1.1/videojs-flash.js"></script>
-  <script src="videojs-flashls-source-handler.min.js"></script>  
-</body>
-<script>
-  var player = videojs('videojs-flash-player', {
-    flash: {
-      swf: 'video-js.swf'
-    }
-  });
-</script>
-</html>
+<!-- VideoJS API -->
+<link href="http://vjs.zencdn.net/5.11.9/video-js.css" rel="stylesheet">
+<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js">  </script>
+<script src="http://vjs.zencdn.net/5.11.9/video.js"></script>
+<style>
+    div{
+       float: left;
+       }
+</style>
+</head>
+    <body>
+      <div>
+        <video id="my_video_1" class="video-js vjs-default-skin" controls autoplay preload='auto' width="300" height="400" 
+        <source src="rtmp://192.168.0.70/live/banana" type='rtmp/flv' />
+      </video>
+     </div>    
+ </body>
+ </html>
